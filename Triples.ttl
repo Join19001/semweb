@@ -1,0 +1,187 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10> .
+
+<http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#berhubungan
+:berhubungan rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#berteman
+:berteman rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#bertemusaatkkn
+:bertemusaatkkn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#suka
+:suka rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#fullname
+:fullname rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#profesi
+:profesi rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#tanggal_lahir
+:tanggal_lahir rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#tempat_lahir
+:tempat_lahir rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#usia
+:usia rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Achmad_Megantara
+:Achmad_Megantara rdf:type owl:Class ;
+                  rdfs:subClassOf :Pemeran_Film .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Adinda_Thomas
+:Adinda_Thomas rdf:type owl:Class ;
+               rdfs:subClassOf :Pemeran_Film .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Aghniy_Haque
+:Aghniy_Haque rdf:type owl:Class ;
+              rdfs:subClassOf :Pemeran_Film .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Calvin_Jeremy
+:Calvin_Jeremy rdf:type owl:Class ;
+               rdfs:subClassOf :Pemeran_Film .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Fajar_Nugra
+:Fajar_Nugra rdf:type owl:Class ;
+             rdfs:subClassOf :Pemeran_Film .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Pemeran_Film
+:Pemeran_Film rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Tissa_Biani
+:Tissa_Biani rdf:type owl:Class ;
+             rdfs:subClassOf :Pemeran_Film .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Anton
+:Anton rdf:type owl:NamedIndividual ,
+                :Calvin_Jeremy ;
+       :bertemusaatkkn :Ayu ,
+                       :Bima ,
+                       :Nur ,
+                       :Wahyu ,
+                       :Widya ;
+       :fullname "Calvin Jeremy Sihombing" ;
+       :profesi "Penyanyi" ;
+       :tanggal_lahir "6 Mei 1991" ;
+       :tempat_lahir "Jakarta" ;
+       :usia "31 tahun" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Ayu
+:Ayu rdf:type owl:NamedIndividual ,
+              :Aghniy_Haque ;
+     :berhubungan :Bima ;
+     :berteman :Nur ,
+               :Widya ;
+     :bertemusaatkkn :Anton ,
+                     :Wahyu ;
+     :fullname "Aghniny Haque" ;
+     :profesi "Aktris" ;
+     :tanggal_lahir "8 Maret 1997" ;
+     :tempat_lahir "Semarang" ;
+     :usia "25 tahun" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Bima
+:Bima rdf:type owl:NamedIndividual ,
+               :Achmad_Megantara ;
+      :berhubungan :Ayu ;
+      :berteman :Nur ;
+      :bertemusaatkkn :Anton ,
+                      :Wahyu ,
+                      :Widya ;
+      :fullname "Achmad Megantara" ;
+      :profesi "Aktor" ;
+      :tanggal_lahir "27 Desember 1996" ;
+      :tempat_lahir "Jakarta" ;
+      :usia "25 tahun" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Nur
+:Nur rdf:type owl:NamedIndividual ,
+              :Tissa_Biani ;
+     :berteman :Ayu ,
+               :Bima ,
+               :Widya ;
+     :bertemusaatkkn :Anton ,
+                     :Wahyu ;
+     :fullname "Tissa Biani Azzahra" ;
+     :profesi "Akrtis" ;
+     :tanggal_lahir "24 Juli 2002" ;
+     :tempat_lahir "Jakarta" ;
+     :usia "19 tahun" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Wahyu
+:Wahyu rdf:type owl:NamedIndividual ,
+                :Fajar_Nugra ;
+       :bertemusaatkkn :Anton ,
+                       :Ayu ,
+                       :Bima ,
+                       :Nur ,
+                       :Widya ;
+       :fullname "Muhamad Fajar Nugraha" ;
+       :profesi "Komedian" ;
+       :tanggal_lahir "25 September 1995" ;
+       :tempat_lahir "Bogor" ;
+       :usia "25 tahun" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Widya
+:Widya rdf:type owl:NamedIndividual ,
+                :Adinda_Thomas ;
+       :berteman :Ayu ,
+                 :Nur ;
+       :bertemusaatkkn :Anton ,
+                       :Wahyu ;
+       :suka :Bima ;
+       :fullname "Adinda Noviana Sari N. Thomas" ;
+       :profesi "Aktris" ;
+       :tanggal_lahir "8 Agustus 1993" ;
+       :tempat_lahir "Bandung" ;
+       :usia "28 tahun" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

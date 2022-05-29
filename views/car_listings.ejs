@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karakter Film KKN Desa Penari</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/listings.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1 class="header">
+    <div class="logo">Karakter Film KKN Desa Penari</div>
+  </h1>
+
+  <div class="car-wrapper">
+    <div class="car-listings">
+      <% cars.forEach(function(car) { %>
+        <div class="car-listings-card">
+          <p class="content-font">Engine Type: <%= car.fullname %></p>
+          <p class="content-font">Year       : <%= car.tempat_lahir %></p>
+          <p class="content-font">Drivetrain : <%= car.tanggal_lahir %></p>
+          <p class="content-font">Type       : <%= car.usia %></p>
+          <p class="content-font">Weight     : <%= car.profesi %></p>
+        </div>
+      <% }); %> 
+    </div>
+  </div>
+</body>
+</html>
