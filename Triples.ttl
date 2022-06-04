@@ -32,8 +32,8 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#fullname
-:fullname rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#nama_pemeran
+:nama_pemeran rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#profesi
@@ -56,38 +56,8 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Achmad_Megantara
-:Achmad_Megantara rdf:type owl:Class ;
-                  rdfs:subClassOf :Pemeran_Film .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Adinda_Thomas
-:Adinda_Thomas rdf:type owl:Class ;
-               rdfs:subClassOf :Pemeran_Film .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Aghniy_Haque
-:Aghniy_Haque rdf:type owl:Class ;
-              rdfs:subClassOf :Pemeran_Film .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Calvin_Jeremy
-:Calvin_Jeremy rdf:type owl:Class ;
-               rdfs:subClassOf :Pemeran_Film .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Fajar_Nugra
-:Fajar_Nugra rdf:type owl:Class ;
-             rdfs:subClassOf :Pemeran_Film .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Pemeran_Film
-:Pemeran_Film rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Tissa_Biani
-:Tissa_Biani rdf:type owl:Class ;
-             rdfs:subClassOf :Pemeran_Film .
+###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Karakter_Film
+:Karakter_Film rdf:type owl:Class .
 
 
 #################################################################
@@ -95,14 +65,13 @@
 #################################################################
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Anton
-:Anton rdf:type owl:NamedIndividual ,
-                :Calvin_Jeremy ;
+:Anton rdf:type owl:NamedIndividual ;
        :bertemusaatkkn :Ayu ,
                        :Bima ,
                        :Nur ,
                        :Wahyu ,
                        :Widya ;
-       :fullname "Calvin Jeremy Sihombing" ;
+       :nama_pemeran "Calvin Jeremy Sihombing" ;
        :profesi "Penyanyi" ;
        :tanggal_lahir "6 Mei 1991" ;
        :tempat_lahir "Jakarta" ;
@@ -110,14 +79,13 @@
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Ayu
-:Ayu rdf:type owl:NamedIndividual ,
-              :Aghniy_Haque ;
+:Ayu rdf:type owl:NamedIndividual ;
      :berhubungan :Bima ;
      :berteman :Nur ,
                :Widya ;
      :bertemusaatkkn :Anton ,
                      :Wahyu ;
-     :fullname "Aghniny Haque" ;
+     :nama_pemeran "Aghniny Haque" ;
      :profesi "Aktris" ;
      :tanggal_lahir "8 Maret 1997" ;
      :tempat_lahir "Semarang" ;
@@ -125,14 +93,13 @@
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Bima
-:Bima rdf:type owl:NamedIndividual ,
-               :Achmad_Megantara ;
+:Bima rdf:type owl:NamedIndividual ;
       :berhubungan :Ayu ;
       :berteman :Nur ;
       :bertemusaatkkn :Anton ,
                       :Wahyu ,
                       :Widya ;
-      :fullname "Achmad Megantara" ;
+      :nama_pemeran "Achmad Megantara" ;
       :profesi "Aktor" ;
       :tanggal_lahir "27 Desember 1996" ;
       :tempat_lahir "Jakarta" ;
@@ -140,14 +107,13 @@
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Nur
-:Nur rdf:type owl:NamedIndividual ,
-              :Tissa_Biani ;
+:Nur rdf:type owl:NamedIndividual ;
      :berteman :Ayu ,
                :Bima ,
                :Widya ;
      :bertemusaatkkn :Anton ,
                      :Wahyu ;
-     :fullname "Tissa Biani Azzahra" ;
+     :nama_pemeran "Tissa Biani Azzahra" ;
      :profesi "Akrtis" ;
      :tanggal_lahir "24 Juli 2002" ;
      :tempat_lahir "Jakarta" ;
@@ -155,14 +121,13 @@
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Wahyu
-:Wahyu rdf:type owl:NamedIndividual ,
-                :Fajar_Nugra ;
+:Wahyu rdf:type owl:NamedIndividual ;
        :bertemusaatkkn :Anton ,
                        :Ayu ,
                        :Bima ,
                        :Nur ,
                        :Widya ;
-       :fullname "Muhamad Fajar Nugraha" ;
+       :nama_pemeran "Muhamad Fajar Nugraha" ;
        :profesi "Komedian" ;
        :tanggal_lahir "25 September 1995" ;
        :tempat_lahir "Bogor" ;
@@ -170,14 +135,13 @@
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#Widya
-:Widya rdf:type owl:NamedIndividual ,
-                :Adinda_Thomas ;
+:Widya rdf:type owl:NamedIndividual ;
        :berteman :Ayu ,
                  :Nur ;
        :bertemusaatkkn :Anton ,
                        :Wahyu ;
        :suka :Bima ;
-       :fullname "Adinda Noviana Sari N. Thomas" ;
+       :nama_pemeran "Adinda Noviana Sari N. Thomas" ;
        :profesi "Aktris" ;
        :tanggal_lahir "8 Agustus 1993" ;
        :tempat_lahir "Bandung" ;

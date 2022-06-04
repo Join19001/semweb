@@ -9,25 +9,28 @@ router.get('/', async(req, res) => {
         prefix : <http://www.semanticweb.org/user/ontologies/2022/4/untitled-ontology-10#> 
         prefix owl: <http://www.w3.org/2002/07/owl#> 
         prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-        prefix xml: <http://www.w3.org/XML/1998/namespace> 
+        prefix xml: <http://www.w3.org/XML/1998/namespace>
         prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
         prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+        SELECT ?nama_pemeran ?fullname ?tempat_lahir ?tanggal_lahir ?usia ?profesi WHERE { 
+
+            ?idKarakter_Film :suka ?id .
+            ?idKarakter_Film :nama_pemeran ?nama_pemeran .
             
-            SELECT ?fullname ?tempat_lahir ?tanggal_lahir ?usia ?profesi WHERE { 
-
-                ?id :fullname ?fullname . 
-                ?id :tempat_lahir ?tempat_lahir . 
-                ?id :tanggal_lahir ?tanggal_lahir . 
-                ?id :usia ?usia .
-                ?id :profesi ?profesi .
-
-            }`;
+            ?id :nama_pemeran ?fullname . 
+            ?id :tempat_lahir ?tempat_lahir . 
+            ?id :tanggal_lahir ?tanggal_lahir . 
+            ?id :usia ?usia .
+            ?id :profesi ?profesi .
+        }
+        ORDER BY ?idKarakter_Film`;
         
         var sparqlEndpoint = 'http://localhost:3030/semweb/sparql';
 
         d3.sparql(sparqlEndpoint, myQuery).then((results) => {
             console.log(results); 
-            res.render('car_listings', { title: 'Data', cars: results });
+            res.render('hubungan 4', { title: 'Data', chars: results });
         });
     } catch (err) {
         if (err.response) {

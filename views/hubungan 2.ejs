@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karakter Film KKN Desa Penari</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/listings.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1 class="header">
+    <div>Karakter Film KKN Desa Penari</div>
+  </h1>
+  
+  <div class="Option">
+      <span>
+        <a href="/" class="menu">Biodata Pemeran</a>
+      </span>
+      <span>
+        <a href="/hubungan1" class="menu">Bertemu Saat KKN</a>
+      </span>
+      <span>
+        <a href="/hubungan2" class="menu">Berhubungan</a>
+      </span>
+      <span>
+        <a href="/hubungan3" class="menu">Berteman</a>
+      </span>
+      <span>
+        <a href="/hubungan4" class="menu">Menyukai</a>
+      </span>
+  </div>
+
+  <div class="char-wrapper">
+    <div class="char-listings">
+      <% chars.forEach(function(char) { %>
+        <div class="char-listings-card">
+          <b><%= char.nama_pemeran %></b>
+          <p class="link">Berhubungan dengan</p>
+          <b><%= char.fullname %></b>
+          <p class="content-font">Tempat Lahir    : <%= char.tempat_lahir %></p>
+          <p class="content-font">Tanggal Lahir   : <%= char.tanggal_lahir %></p>
+          <p class="content-font">Usia            : <%= char.usia %></p>
+          <p class="content-font">Profesi         : <%= char.profesi %></p>
+        </div>
+      <% }); %> 
+    </div>
+  </div>
+</body>
+</html>
